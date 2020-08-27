@@ -1,0 +1,8 @@
+<?xml version='1.0' ?>
+
+<launch>
+
+  <executable cmd="ros2 run rmf_demo_tasks request_loop -s L3_door -f L2_door -r tinyRobot -n 3" output="both"/>
+  <executable cmd="ros2 run rmf_demo_tasks delayed_request_loop -s tinyRobot1_charger -f L3_door -r tinyRobot -n 3 --delay 16" output="both"/>
+
+</launch>
