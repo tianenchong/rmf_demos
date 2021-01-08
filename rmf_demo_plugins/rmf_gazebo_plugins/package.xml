@@ -8,6 +8,7 @@
   <author>Yadu</author>
   <author>Aaron Chong</author>
   <author>Rushyendra Maganty</author>
+  <author>Chong Tian En</author>
   <maintainer email="luca@openrobotics.org">Luca Della Vedova</maintainer>
   <license>Apache 2.0</license>
 
@@ -18,7 +19,8 @@
   <depend>gazebo_ros_pkgs</depend>
 
   <depend>std_msgs</depend>
-  
+
+  <depend>rmf_door_msgs</depend>
   <depend>rmf_fleet_msgs</depend>
   <depend>rmf_dispenser_msgs</depend>
   <depend>rmf_ingestor_msgs</depend>
