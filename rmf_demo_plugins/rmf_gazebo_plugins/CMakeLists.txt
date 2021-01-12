@@ -35,29 +35,6 @@ find_package(rmf_plugins_common REQUIRED)
 include(GNUInstallDirs)
 
 ###############################
-# DoorWatcher Plugin
-###############################
-
-add_library(door_watcher SHARED src/DoorWatcher.cpp)
-
-ament_target_dependencies(door_watcher
-  rclcpp
-  gazebo_ros
-  std_msgs
-  rmf_door_msgs
-  rmf_plugins_common
-)
-
-message( ${CMAKE_INSTALL_INCLUDEDIR} )
-
-target_include_directories(door_watcher
-  PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
-    ${GAZEBO_INCLUDE_DIRS}
-)
-
-###############################
 # TeleportDispenser Plugin
 ###############################
 
@@ -135,7 +112,6 @@ install(
     teleport_dispenser
     teleport_ingestor
     readonly
-    door_watcher
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
